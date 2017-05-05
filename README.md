@@ -36,9 +36,13 @@ Can also use ```yarn``` instead of ```npm```.
 
 #### Welcome
 * [```src/components/Welcome.js```](src/components/Welcome.js)
-* Basic ```React Component``` (function) with ```props```, ```propTypes``` and ```defaultProps```. 
+* Basic React Component (function) with ```props```, ```propTypes``` and ```defaultProps```. 
 * Renders "**Hello {name}!**" or "**Hello World!**" if name property is not provided.
 ---
 #### Clock
 * [```src/components/Clock.js```](src/components/Clock.js)
-* Basic ```React Component``` (class) demonstrating use of ```constructor```, ```state```, lifecycle methods (```componentDidMount``` & ```componentWillUnmount```). 
+* Basic React Component (class) demonstrating use of ```constructor```, ```state```, lifecycle methods (```componentDidMount``` & ```componentWillUnmount```). 
+---
+#### Counter
+* [```src/components/Counter.js```](src/components/Counter.js)
+* React Component demonstrating event handling and conditional rendering.
