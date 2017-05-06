@@ -7,27 +7,26 @@ import Counter from './components/Counter';
 
 import './index.css';
 
-  const element = (
-    <div>
-      <h1>Hello World!</h1>
-      <hr />
-      
-      <Welcome />
-      <Welcome name="Martin" />
-      <Welcome name="Masa" />
-      <hr />
+const element = (
+  <div>
+    <h1>Hello World!</h1>
+    <hr />
+    
+    <Welcome />
+    <Welcome name="Martin" />
+    <Welcome name="Masa" />
+    <hr />
 
-      <Clock />
-      <hr />
+    <Clock />
+    <hr />
 
-      <Counter />
-      <Counter step={3}/>
-      <hr />
-    </div>
-  );
+    <Counter />
+    <Counter step={3}/>
+    <hr />
+  </div>
+);
 
-  ReactDOM.render(
-    element,
-    document.getElementById('root')
-  );
-  
+ReactDOM.render(
+  element,
+  document.getElementById('root')
+);

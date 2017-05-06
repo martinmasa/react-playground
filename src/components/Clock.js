@@ -5,13 +5,13 @@ class Clock extends Component {
     super(props);
     this.state = {
       date: new Date()
-    }
+    };
   }
 
   tick() {
     this.setState({
       date: new Date()
-    })
+    });
   }
   
   componentDidMount() {
