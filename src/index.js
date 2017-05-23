@@ -5,10 +5,14 @@ import Welcome from './components/Welcome';
 import Clock from './components/Clock';
 import Counter from './components/Counter';
 
+import registerServiceWorker from './registerServiceWorker';
+
+import 'milligram';
+
 import './index.css';
 
 const element = (
-  <div>
+  <div className="container">
     <h1>Hello World!</h1>
     <hr />
     
@@ -30,3 +34,5 @@ ReactDOM.render(
   element,
   document.getElementById('root')
 );
+
+registerServiceWorker();
