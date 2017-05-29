@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import Welcome from './components/Welcome';
 import Clock from './components/Clock';
 import Counter from './components/Counter';
+import TicTacToe from './components/TicTacToe'
 
 import registerServiceWorker from './registerServiceWorker';
 
@@ -27,6 +28,9 @@ const element = (
     <Counter />
     <Counter step={3}/>
     <hr />
+
+    <h2>Tic-Tac-Toe</h2>
+    <TicTacToe />
   </div>
 );
 

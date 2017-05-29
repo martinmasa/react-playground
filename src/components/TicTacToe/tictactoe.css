@@ -1,0 +1,51 @@
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+  width: 100px;
+}
+
+.status {
+  margin-bottom: 10px;
+}
+
+.square {
+  box-sizing: border-box;
+  background: #fff;
+  border: 1px solid #9b4dca;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 34px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 34px;
+  border-radius: 0;
+  margin-bottom: 0;
+  color: #9b4dca;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.kbd-navigation .square:focus {
+  background: #ddd;
+}
+
+.moves li {
+  cursor: pointer;
+  color: #9b4dca;
+}
+
+.tictactoe {
+  display: flex;
+  flex-direction: row;
+}
+
+.t3-info {
+  margin-left: 20px;
+}
