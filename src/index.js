@@ -4,7 +4,8 @@ import ReactDOM from 'react-dom';
 import Welcome from './components/Welcome';
 import Clock from './components/Clock';
 import Counter from './components/Counter';
-import TicTacToe from './components/TicTacToe'
+import TicTacToe from './components/TicTacToe';
+import FileUpload from './components/FileUpload';
 
 import registerServiceWorker from './registerServiceWorker';
 
@@ -29,8 +30,13 @@ const element = (
     <Counter step={3}/>
     <hr />
 
-    <h2>Tic-Tac-Toe</h2>
+    <h3>Tic-Tac-Toe</h3>
     <TicTacToe />
+    <hr />
+
+    <h3>File Upload</h3>
+    <FileUpload />
+    
   </div>
 );
 

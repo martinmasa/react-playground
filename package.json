@@ -6,9 +6,13 @@
   "repository": "https://github.com/mtendotnet/react-playground.git",
   "private": true,
   "dependencies": {
+    "aws-sdk": "^2.58.0",
     "milligram": "^1.3.0",
+    "multer": "^1.3.0",
     "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "react-dom": "^15.5.4",
+    "react-dropzone": "^3.13.2",
+    "superagent": "^3.5.2"
   },
   "devDependencies": {
     "enzyme": "^2.8.2",
