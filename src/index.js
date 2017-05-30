@@ -1,6 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import {
+  BrowserRouter, 
+  Link, 
+  Route
+} from 'react-router-dom';
+
 import Welcome from './components/Welcome';
 import Clock from './components/Clock';
 import Counter from './components/Counter';
@@ -13,35 +19,74 @@ import 'milligram';
 
 import './index.css';
 
-const element = (
-  <div className="container">
-    <h1>Hello World!</h1>
-    <hr />
-    
-    <Welcome />
-    <Welcome name="Martin" />
-    <Welcome name="Masa" />
-    <hr />
+const myComponents = [
+  'Welcome',
+  'Clock',
+  'Counter',
+  'TicTacToe',
+  'FileUpload'
+];
 
-    <Clock />
-    <hr />
+const Sidebar = () => {
+  return (
+    <aside className="column column-20">
+      <ul>
+        {myComponents.map((component) => (
+          <li>
+            <Link to={`/c/${component}`}>{component}</Link>
+          </li>
+        ))}
+      </ul>
+    </aside>
+  )
+};
 
-    <Counter />
-    <Counter step={3}/>
-    <hr />
+const Main = () => {
+  return (
+    <main className="column column-50">
 
-    <h3>Tic-Tac-Toe</h3>
-    <TicTacToe />
-    <hr />
+      <Route path="/c/Welcome" render={() => (
+        <section>
+          <h1>Hello World!</h1>
+          <hr />
+          
+          <Welcome />
+          <Welcome name="Martin" />
+          <Welcome name="Masa" />
+          <hr />
+        </section>
+      )} />
 
-    <h3>File Upload</h3>
-    <FileUpload />
-    
-  </div>
-);
+      <Route path="/c/Clock" component={Clock} />
+      
+      <Route path="/c/Counter" render={() => (
+        <section>
+          <h3>Counter</h3>
+          <Counter />
+          <Counter step={3}/>
+        </section>
+      )} />
+
+      <Route path="/c/TicTacToe" component={TicTacToe} />
+      <Route path="/c/FileUPload" component={FileUpload} />
+    </main>
+  )
+};
+
+const App = () => {
+  return (
+    <BrowserRouter>
+      <div className="container">
+        <div className="row">
+          <Sidebar />
+          <Main />
+        </div>
+      </div>
+    </BrowserRouter>
+)};
 
 ReactDOM.render(
-  element,
+  <App />,
   document.getElementById('root')
 );
 

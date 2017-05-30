@@ -5,3 +5,11 @@ body {
 .button {
   margin-right: 5px;
 }
+
+aside ul {
+  list-style: none;
+}
+
+aside li {
+  cursor: pointer;
+}
